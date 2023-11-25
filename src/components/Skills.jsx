@@ -36,6 +36,7 @@ const Skills = () => {
             </p>
           </div>
         </div>
+        
 
         {/* Other Languages Card */}
         <div className="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg bg-white rounded-md overflow-hidden shadow-lg mb-8">
