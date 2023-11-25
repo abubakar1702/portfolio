@@ -1,6 +1,4 @@
 import Layout from './components/Layout'
-import './app.css'
-
 
 function App() {
 

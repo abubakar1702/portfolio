@@ -105,12 +105,12 @@ const AboutMe = () => {
           </div>
 
           <div
-            className={`bg-white p-6 rounded-lg shadow-md w-5/6 md:w-2/3 h-auto mb-4 ${
+            className={`bg-sky-400 p-6 rounded-lg shadow-md w-5/6 md:w-2/3 h-auto mb-4 ${
               activeTab === "skills" ? "hidden" : ""
             }`}
           >
             <h3 className="text-xl font-bold mb-4">Experience</h3>
-            <div className="flex flex-col space-y-4 p-4 w-full shadow-md">
+            <div className="flex flex-col bg-white rounded space-y-4 p-4 w-full shadow-md">
               <h3 className="text-left">Software Engineer (intern)</h3>
               <h1 className="text-left text-xl text-red-600 font-bold">
                 Codemen Solution Ltd.
