@@ -1,6 +1,65 @@
 import React from "react";
 
+import geobro from "../assets/geobro.jpeg"
+import map from "../assets/map.jpeg"
+import todo from "../assets/todo.jpeg"
+
+const Project = ({ title, description, technologies, githubLink, liveDemoLink, imageSrc }) => {
+  return (
+    <div className="bg-white p-6 shadow-md rounded-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-2">
+      <img
+        src={imageSrc}
+        alt={title}
+        className="w-full h-48 object-cover mb-4 rounded-md"
+      />
+      <h3 className="text-xl font-semibold mb-2">{title}</h3>
+      <p className="text-gray-700 mb-4">{description}</p>
+      <p className="text-sm font-medium text-blue-500">Technologies used: {technologies}</p>
+      <div className="mt-4 space-x-2">
+        <a
+          href={githubLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-500 hover:text-blue-500"
+        >
+          GitHub
+        </a>
+        <a href={liveDemoLink} className="text-gray-500 hover:text-blue-500" target="_blank" rel="noopener noreferrer">
+          Live Link
+        </a>
+      </div>
+    </div>
+  );
+};
+
 const Projects = () => {
+  const projects = [
+    {
+      title: "Flag Guessing Game (GeoBro)",
+      description: "Developed an engaging flag guessing game where users identify countries based on displayed flags. Implemented a point system and time constraint for added challenge.",
+      technologies: "Next.js, Tailwind CSS",
+      githubLink: "https://github.com/abubakar1702/geobro",
+      liveDemoLink: "https://geobro-rust.vercel.app/o",
+      imageSrc: geobro, // Replace with your actual image source
+    },
+    {
+      title: "Country Guessing Game (GeoBro - Map)",
+      description: "Designed an interactive game where users locate a random country on a map, enhancing geographical awareness.",
+      technologies: "React.js, Tailwind CSS, Leaflet API",
+      githubLink: "https://github.com/abubakar1702/geobro-map",
+      liveDemoLink: "https://geobro-map.vercel.app/",
+      imageSrc: map, // Replace with your actual image source
+    },
+    {
+      title: "Task Management App",
+      description: "Developed an employee task management application facilitating task addition, updates, and deletions, with all data stored in local storage.",
+      technologies: "React.js, Tailwind CSS",
+      githubLink: "https://github.com/abubakar1702/task-management",
+      liveDemoLink: "https://task-management-two-ochre.vercel.app/",
+      imageSrc: todo, // Replace with your actual image source
+    },
+  ];
+
   return (
     <div>
       <h1
@@ -14,125 +73,9 @@ const Projects = () => {
           id="bodyHobbies"
           className="grid grid-cols-1 gap-6 mx-4 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4"
         >
-          {/* Child Adoption System */}
-          <div className="bg-white p-6 shadow-md rounded-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-2">
-            <img
-              src="adoption.png"
-              alt="Child Adoption System"
-              className="w-full h-48 object-cover mb-4 rounded-md"
-            />
-            <h3 className="text-xl font-semibold mb-2">
-              Child Adoption System
-            </h3>
-            <p className="text-gray-700 mb-4">
-              Developed a web-based platform for managing child adoption
-              processes.
-            </p>
-            <p className="text-sm font-medium text-blue-500">
-              Technologies used: HTML, CSS, PHP, MySQL
-            </p>
-            <div className="mt-4 space-x-2">
-              <a
-                href="https://github.com/your-username/child-adoption-system"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-500 hover:text-blue-500"
-              >
-                GitHub
-              </a>
-              <a href="#" className="text-gray-500 hover:text-blue-500">
-                Live Link
-              </a>
-            </div>
-          </div>
-
-          {/* Weather App */}
-          <div className="bg-white p-6 shadow-md rounded-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-2">
-            <img
-              src="weather.png"
-              alt="Weather App"
-              className="w-full h-48 object-cover mb-4 rounded-md"
-            />
-            <h3 className="text-xl font-semibold mb-2">Weather App</h3>
-            <p className="text-gray-700 mb-4">
-              Created a weather web page that provides live weather information.
-            </p>
-            <p className="text-sm font-medium text-blue-500">
-              Technologies used: HTML5, CSS3, JavaScript
-            </p>
-            <div className="mt-4 space-x-2">
-              <a
-                href="https://github.com/your-username/weather-app"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-500 hover:text-blue-500"
-              >
-                GitHub
-              </a>
-              <a href="#" className="text-gray-500 hover:text-blue-500">
-                Live Link
-              </a>
-            </div>
-          </div>
-
-          {/* E-commerce Platform */}
-          <div className="bg-white p-6 shadow-md rounded-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-2">
-            <img
-              src="https://via.placeholder.com/400"
-              alt="E-commerce Platform"
-              className="w-full h-48 object-cover mb-4 rounded-md"
-            />
-            <h3 className="text-xl font-semibold mb-2">E-commerce Platform</h3>
-            <p className="text-gray-700 mb-4">
-              Built a scalable e-commerce platform for selling products online.
-            </p>
-            <p className="text-sm font-medium text-blue-500">
-              Technologies used: HTML, CSS, JavaScript
-            </p>
-            <div className="mt-4 space-x-2">
-              <a
-                href="https://github.com/your-username/ecommerce-platform"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-500 hover:text-blue-500"
-              >
-                GitHub
-              </a>
-              <a href="#" className="text-gray-500 hover:text-blue-500">
-                Live Link
-              </a>
-            </div>
-          </div>
-
-          {/* Frag Guessing Game */}
-          <div className="bg-white p-6 shadow-md rounded-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-2">
-            <img
-              src="frag_game.png"
-              alt="Frag Guessing Game"
-              className="w-full h-48 object-cover mb-4 rounded-md"
-            />
-            <h3 className="text-xl font-semibold mb-2">Frag Guessing Game</h3>
-            <p className="text-gray-700 mb-4">
-              Developed a guessing game for fragrances, testing users' scent
-              recognition.
-            </p>
-            <p className="text-sm font-medium text-blue-500">
-              Technologies used: React, CSS, Firebase
-            </p>
-            <div className="mt-4 space-x-2">
-              <a
-                href="https://github.com/your-username/frag-guessing-game"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-500 hover:text-blue-500"
-              >
-                GitHub
-              </a>
-              <a href="#" className="text-gray-500 hover:text-blue-500">
-                Live Link
-              </a>
-            </div>
-          </div>
+          {projects.map((project, index) => (
+            <Project key={index} {...project} />
+          ))}
         </div>
       </div>
     </div>

@@ -1,12 +1,14 @@
 import Layout from './components/Layout'
 
-function App() {
+import { BrowserRouter as Router } from 'react-router-dom';
 
+function App() {
   return (
-    <div className=' bg-[#efeaeb] '>
-     <Layout />
-    </div>
-  )
+    <Router>
+      <Layout />
+    </Router>
+  );
 }
 
-export default App
+export default App;
+

@@ -6,7 +6,6 @@ import Gallery from './Gallery'
 import Contact from './Contact'
 import Skills from './Skills'
 import AboutMe from './AboutMe'
-//import NavBar from './Navbar/Navbar'
 
 const Layout = () => {
   return (

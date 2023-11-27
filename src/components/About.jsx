@@ -1,4 +1,5 @@
 import React from "react";
+import david from "../assets/david.png"
 
 const About = () => {
   return (
@@ -19,7 +20,7 @@ const About = () => {
       </div>
       <div className="w-full lg:w-[50%] flex justify-center">
         <img
-          src="https://wallpapercave.com/wp/wp4196521.jpg"
+          src= {david}
           className="h-auto max-w-full rounded-lg shadow-none transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-black/30"
           alt=""
         />

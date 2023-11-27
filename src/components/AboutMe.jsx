@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+
 const AboutMe = () => {
   const [activeTab, setActiveTab] = useState("skills");
 
@@ -8,7 +9,7 @@ const AboutMe = () => {
   };
 
   return (
-    <section className="py-10 bg-gray-100">
+    <section className="">
       <div className="container mx-auto text-center">
         <div className="mb-10">
           <h2 className="text-2xl md:text-4xl font-bold text-gray-800 mb-2">
